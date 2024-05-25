@@ -1,7 +1,7 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/")
-def welcom():
-    return "<html><body><h1>Chandramani's App! Updated file</h1></body></html>"
+def welcome():
+    return render_template("index.html")
